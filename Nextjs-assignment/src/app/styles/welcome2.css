@@ -1,4 +1,4 @@
-/* Assignment 2 page.jsx */
+/* Assignment 2 page.jsx style css */
 
 .welcome-container {
   text-align: center;
@@ -7,7 +7,7 @@
 
 .welcome-container h1 {
   font-size: 2.5em;
-  color: #334;
+  color: #333;
 }
 
 .navigation-container {
@@ -16,14 +16,22 @@
 
 .navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   list-style: none;
   padding: 0;
+  gap: 20px;
+}
+
+.navigation-section {
+  flex: 1;
+  min-width: 200px;
 }
 
 .navigation-list {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .navigation-item {

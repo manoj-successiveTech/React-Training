@@ -1,0 +1,205 @@
+
+
+.heading {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;                               /* This ensures the container takes the full height of the viewport */
+    margin: 0;                                   /* Removes default margin */
+}
+
+.user-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.user-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* styles of question 2 */
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.user-info {
+  margin-top: 10px;
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.user-info p {
+  margin: 5px 0 0;
+  color: #666;
+}
+
+
+/* css of question 3 - styles/Welcome.css */
+.app-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.input-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container label {
+  margin-bottom: 10px;
+}
+
+.input-container input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-container button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-container button:hover {
+  background-color: #0056b3;
+}
+
+.weather-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.sunny-message {
+  color: #ff6347;
+  font-size: 1.2em;
+}
+
+.cold-message {
+  color: #4682b4;
+  font-size: 1.2em;
+}
+
+.normal-message {
+  color: #32cd32;
+  font-size: 1.2em;
+}
+
+/* question 4 css style*/
+
+.counter-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.count-display {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.increment-button,
+.decrement-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.increment-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.decrement-button {
+  background-color: #f44336;
+  color: white;
+}
+
+
+/*  question 5 style css */
+
+/* styles/welcome.css */
+
+.appContainer {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.taskListContainer {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+}
+
+.taskItem {
+  list-style-type: none;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #2d2d2d;
+  border: 1px solid #444;
+  border-radius: 3px;
+}
+
+.taskItem h3 {
+  margin: 0 0 5px 0;
+  color: #ffffff;
+}
+
+.taskItem p {
+  margin: 0;
+  color: #cccccc;
+}
+
+/* Question 6 Style CSS  */
+
+ .buttonContainer {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #6d6666;
+  border-radius: 5px;
+  background-color: #6b6565;
+}
+
+.App {
+  text-align: center;
+  margin: 20px;
+} 
+

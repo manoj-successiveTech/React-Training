@@ -1,0 +1,41 @@
+/* Assignment 2 page.jsx */
+
+.welcome-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome-container h1 {
+  font-size: 2.5em;
+  color: #334;
+}
+
+.navigation-container {
+  margin-top: 20px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.navigation-list {
+  display: flex;
+  gap: 20px;
+}
+
+.navigation-item {
+  list-style: none;
+}
+
+.navigation-item a {
+  text-decoration: none;
+  color: #0070f3;
+  font-weight: bold;
+}
+
+.navigation-item a:hover {
+  text-decoration: underline;
+}

@@ -4,12 +4,38 @@
 // Add two buttons, one for incrementing the count and another for decrementing it.
 // When the user clicks on the buttons, update the count state accordingly.
 
-import React from 'react'
+'use client'
+import React, { useState } from 'react';
+import '@/app/styles/welcome2.css';
 
-const page = () => {
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
+
   return (
-    <div>Question-1</div>
-  )
-}
+    
+     <>
+    <div className='question'>Question-1 <br/>Create a functional component called Counter.
+Inside the component, use the useState hook to manage a state variable named count initialized to 0.
+Render the current value of count in a p tag element.
+Add two buttons, one for incrementing the count and another for decrementing it.
+When the user clicks on the buttons, update the count state accordingly. </div>
 
-export default page
+    <div className="container">
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+    </div>
+
+    </>
+  );
+};
+
+export default Counter;

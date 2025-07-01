@@ -1,0 +1,34 @@
+import { useState } from 'react';
+
+function useLocalStorage(key, initialValue) {
+  // State to store our value
+  const [storedValue, setStoredValue] = useState(() => {
+    try {
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue;
+    } catch {
+      return initialValue;
+    }
+  });
+
+  // Function to set value both in state and localStorage
+  const setValue = (value) => {
+    try {
+      const valueToStore = value instanceof Function ? value(storedValue) : value;
+      setStoredValue(valueToStore);
+      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+    } catch {}
+  };
+
+  // Function to remove item from localStorage and reset state
+  const remove = () => {
+    try {
+      window.localStorage.removeItem(key);
+      setStoredValue(initialValue);
+    } catch {}
+  };
+
+  return [storedValue, setValue, remove];
+}
+
+export default useLocalStorage;

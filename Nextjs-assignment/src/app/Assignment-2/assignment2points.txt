@@ -1,9 +1,13 @@
--> Workflow Procedure- how to connect all questions 1 to 6 connect to each other via routes(absolute routing) in assignment- 1 and main page (page.jsx) -where all assignment
+-> Workflow Procedure- how to connect all questions 1 to 19 connect to each other via routes(absolute routing) in assignment- 2 and main page (page.jsx) -where all assignment
 
 ->use <>(initial) </> - (final -end point of return) in every app components for refracting the web page
 
 -> Understand the workflow in some questions page.jsx with components using welcome.css
 
+->Understand th useContext 
+
 -> understand the page components & app components
 
--> how the routing works in assignment-1
+-> how the routing works in assignment-2
+
+->Learn the different hooks in the assignment

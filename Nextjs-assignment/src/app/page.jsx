@@ -20,9 +20,9 @@ export default function Home() {
             <Link href='/Assignment-2'>Assignment-2</Link>
           </li>
 
-          {/* <li>
+          <li>
             <Link href='/Assignment-3'>Assignment-3</Link>
-          </li> */}
+          </li>
       </nav>
 
 

@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/Theme";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { AuthProvider } from "@/context/AuthContext";
+
 // import NavBar from "@NavBar/Components/NavBar";
 
 const geistSans = Geist({
@@ -26,6 +28,7 @@ export default function RootLayout({ children }) {
     <ThemeProvider>
     <LanguageProvider>
 
+
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
             {/* <NavBar/> */}
         {children}
@@ -33,6 +36,7 @@ export default function RootLayout({ children }) {
       
       </LanguageProvider>
       </ThemeProvider>
+    
       
     </html>
   );

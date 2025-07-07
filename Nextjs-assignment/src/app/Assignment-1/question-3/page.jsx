@@ -6,7 +6,7 @@
 'use client'
 
 import '@/app/styles/welcome.css';   
-import Weather from '@/components/Weather.jsx';
+import Weather from '@/components/Weather';
 import React, { useState } from 'react';
 
 // import React from 'react'

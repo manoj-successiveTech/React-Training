@@ -23,10 +23,9 @@ export default function Home() {
           <li>
             <Link href='/Assignment-3'>Assignment-3</Link>
           </li>
+
+
       </nav>
-
-
-
     </div>
     </> 
  );

@@ -9,7 +9,8 @@ use useRouter from next/navigation to re-direct to other pages in some questions
 1.create two components: a parent component that acts as a provider and a child component that consumes the context.
 Create a context to manage a user's authentication status (logged in or out).
 Implement a login button in the child component that, when clicked, updates the authentication status in the context to "logged in."
-Display a message in the child component based on the user's authentication status. If the user is logged in, show "Welcome, [username]!" Otherwise, display "Please log in."
+Display a message in the child component based on the user's authentication status. If the user is logged in, show "Welcome, [username]!"
+Otherwise, display "Please log in."
 
 2.Extend the previous application to demonstrate the use of nested contexts.
 Create a new context to manage user preferences (e.g., theme preference).
@@ -43,3 +44,18 @@ Create a route parameter that represents the item's ID in the URL (e.g., "/produ
 Fetch item details based on the route parameter and display them on the detail page.
 Add a "Go Back" button on the detail page to return to the list.
 
+
+
+
+
+
+
+
+### **4. All 6 Questions Working**
+
+1. **Question 1:** Authentication Context with parent/child
+2. **Question 2:** Nested Contexts (Auth + Theme)
+3. **Question 3:** File routing (Home, About, 404)
+4. **Question 4:** Protected routes with login
+5. **Question 5:** Nested routing with Dashboard
+6. **Question 6:** Dynamic routing with products

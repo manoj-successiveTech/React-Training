@@ -2,16 +2,17 @@
 
 'use client';
 import { AuthProvider } from '@/context/AuthContext';
+import Styles from "@/app/styles/welcome3.css"
 
 const RootLayout = ({ children }) => {
   return (
-    <html>
-      <body>
+  
+    
         <AuthProvider> {/* Already wrapping the entire app */}
           {children}
         </AuthProvider>
-      </body>
-    </html>
+    
+   
   );
 };
 

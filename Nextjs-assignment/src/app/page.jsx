@@ -2,7 +2,6 @@
 import React from 'react'
 import Link from 'next/link';
 
-
 export default function Home() {
   return (
     <>
@@ -22,6 +21,10 @@ export default function Home() {
 
           <li>
             <Link href='/Assignment-3'>Assignment-3</Link>
+          </li>
+
+           <li>
+            <Link href='/Assignment-4'>Assignment-4</Link>
           </li>
 
 

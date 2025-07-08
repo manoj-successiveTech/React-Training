@@ -5,6 +5,7 @@
 // Allow the user to change their theme preference (light/dark) using a button in the child component.
 // Display the theme preference in the UI and adjust the component's styling accordingly.
 
+
 'use client'
 import React, { useState } from 'react';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
@@ -17,7 +18,7 @@ const NestedChild = () => {
   const [name, setName] = useState('');
 
   return (
-    <div className={`nested-container ${theme}`}>
+    <>
       <h2>Theme: {theme}</h2>
       <button onClick={toggleTheme}>Toggle Theme</button>
       <br /><br />
@@ -34,16 +35,28 @@ const NestedChild = () => {
           <button onClick={() => login(name)}>Login</button>
         </>
       )}
+    </>
+  );
+};
+
+const ThemedWrapper = ({ children }) => {
+  const { theme } = useTheme();
+
+  return (
+    <div className={`app-container ${theme}`}>
+      {children}
     </div>
   );
 };
 
 const Question2 = () => (
+  <ThemeProvider>
   <AuthProvider>
-    <ThemeProvider>
-      <NestedChild />
-    </ThemeProvider>
+      <ThemedWrapper>
+        <NestedChild />
+      </ThemedWrapper> 
   </AuthProvider>
+      </ThemeProvider>
 );
 
 export default Question2;

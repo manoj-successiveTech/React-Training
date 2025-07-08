@@ -5,6 +5,7 @@
 // Display a message in the child component based on the user's authentication status. If the user is logged in, show "Welcome, [username]!"
 // Otherwise, display "Please log in."
 // Question1 - page.jsx
+
 'use client'
 import React, { useState } from 'react';
 import { AuthProvider, useAuth } from '@/context/AuthContext';

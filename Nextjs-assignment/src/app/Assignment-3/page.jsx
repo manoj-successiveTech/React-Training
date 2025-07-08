@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import "@/app/styles/welcome3.css"
+import Styles from "@/app/styles/welcome3.css"
 
 const Page = () => {
   return (
@@ -36,6 +36,7 @@ const Page = () => {
             <Link href='/Assignment-3/question-6'>Question-6</Link>
           </li>
 
+         
         </nav>
 
     </div>

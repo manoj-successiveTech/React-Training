@@ -1,15 +1,8 @@
-// 4.Enhance the previous application by adding protected pages that require authentication.
-// Create a login page with a form that accepts a username and password.
-// Implement authentication logic (e.g., hardcode a username and password for now).
-// Secure the About page so that it can only be accessed by authenticated users.
-// Redirect unauthenticated users to the login page.
-// Display a message on the Home page welcoming the authenticated user.
-
-
-'use client'
+'use client';
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
+import '@/app/styles/welcome3.css';
 
 const LoginForm = () => {
   const { login } = useAuth();
@@ -27,10 +20,22 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
-      <input type="text" placeholder="Username" value={user} onChange={(e) => setUser(e.target.value)} />
-      <input type="password" placeholder="Password" value={pass} onChange={(e) => setPass(e.target.value)} />
+    <div className="app-container">
+      <h2>Login</h2>
+      <input
+        type="text"
+        placeholder="Username"
+        value={user}
+        onChange={(e) => setUser(e.target.value)}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        value={pass}
+        onChange={(e) => setPass(e.target.value)}
+      />
       <button onClick={handleLogin}>Login</button>
+      <div className="hint">Hint: Username: <b>admin</b>, Password: <b>admin</b></div>
     </div>
   );
 };
@@ -43,16 +48,20 @@ const ProtectedAbout = () => {
     router.push('/Question4-login');
     return null;
   }
-  return <h2>Welcome to the protected About page, {username}!</h2>;
+
+  return (
+    <div className="app-container">
+      <h2>Welcome to the protected About page, {username}!</h2>
+    </div>
+  );
 };
 
 const Question4 = () => {
   const pathname = useRouter().pathname;
 
-  if (pathname === '/Question4-about') return <ProtectedAbout />;
   return (
     <AuthProvider>
-      <LoginForm />
+      {pathname === '/Question4-about' ? <ProtectedAbout /> : <LoginForm />}
     </AuthProvider>
   );
 };

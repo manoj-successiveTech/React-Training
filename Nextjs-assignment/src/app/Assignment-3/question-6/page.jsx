@@ -1,6 +1,14 @@
-'use client'
+// 6.Create a list of items (e.g., products, articles) in your application.
+// Implement dynamic routing to display details for each item when clicked.
+// Create a route parameter that represents the item's ID in the URL (e.g., "/products/:id").
+// Fetch item details based on the route parameter and display them on the detail page.
+// Add a "Go Back" button on the detail page to return to the list.
+
+// app/products/page.jsx
+'use client';
 import React from 'react';
 import Link from 'next/link';
+import '@/app/styles/welcome3.css';
 
 const products = [
   { id: 1, name: 'Laptop', desc: 'High-performance laptop for work and gaming.' },
@@ -10,17 +18,17 @@ const products = [
 
 const ProductListPage = () => {
   return (
-    <div style={{ padding: '2rem' }}>
+    <div className="app-container">
       <h2>🛍️ Product List</h2>
-      {products.map((product) => (
-        <div key={product.id} style={{ margin: '1rem 0' }}>
-          <Link href={`/products/${product.id}`}>
-            <span style={{ fontSize: '1.1rem' }}>
+      <ul className="product-list">
+        {products.map((product) => (
+          <li key={product.id}>
+            <Link href={`/products/${product.id}`}>
               ➕ {product.name}
-            </span>
-          </Link>
-        </div>
-      ))}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

@@ -37,7 +37,7 @@ function Page() {
           </select>
 
           {selectedOption && (
-            <p className="dropdown-message">🍓 You selected: <strong>{selectedOption}</strong></p>
+            <p className="dropdown-message"> You selected: <strong>{selectedOption}</strong></p>
           )}
         </div>
       </div>

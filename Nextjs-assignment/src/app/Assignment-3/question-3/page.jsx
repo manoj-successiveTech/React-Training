@@ -14,13 +14,13 @@ const Question3 = () => {
   return (
     <div>
       <nav>
-        <Link href="/Question3-page">Home</Link> |{' '}
-        <Link href="/Question3-about">About</Link>
+        <Link href='./question-3/home'>Home</Link> |{' '}
+        <Link href='./question-3/about'>About</Link>
       </nav>
       <div>
-        {pathname === '/Question3-page' && <h1>Welcome to the Home Page</h1>}
-        {pathname === '/Question3-about' && <h1>About Us</h1>}
-        {pathname !== '/Question3-page' && pathname !== '/Question3-about' && <h1>404 Not Found</h1>}
+        {pathname === './question-3/home' && <h1>Welcome to the Home Page</h1>}
+        {pathname === '/question3/about' && <h1>About Us</h1>}
+        {pathname !== '/question-3/home' && pathname !== '/question3/about' && <h1>404 Not Found</h1>}
       </div>
     </div>
   );

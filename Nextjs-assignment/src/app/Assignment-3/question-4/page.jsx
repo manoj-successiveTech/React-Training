@@ -13,7 +13,7 @@ const LoginForm = () => {
   const handleLogin = () => {
     if (user === 'admin' && pass === 'admin') {
       login(user);
-      router.push('/Question4-about');
+      router.push('question-4/about');
     } else {
       alert('Invalid credentials');
     }

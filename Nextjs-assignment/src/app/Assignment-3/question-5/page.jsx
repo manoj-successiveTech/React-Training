@@ -16,9 +16,9 @@ const Dashboard = () => {
     <div>
       <h2>Dashboard</h2>
       <nav>
-        <Link href="/Question5/dashboard">Main</Link> |{' '}
-        <Link href="/Question5/profile">Profile</Link> |{' '}
-        <Link href="/Question5/settings">Settings</Link>
+        <Link href="question-5/home">Home</Link> |{' '}
+        <Link href="question-5/profile">Profile</Link> |{' '}
+        <Link href="question-5/setting">Settings</Link>
       </nav>
       {pathname.includes('profile') && <div>Profile Page Content</div>}
       {pathname.includes('settings') && <div>Settings Page Content</div>}

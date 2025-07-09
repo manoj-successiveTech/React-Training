@@ -1,0 +1,36 @@
+                                                        ------------ Assignment5 ---------------------
+
+Description  (Question-8 to 11 -Graph Ql based questions(Not to do))
+
+1. Create a Next.js component using the App Router that fetches data on the server side (SSR) from a public API (e.g., JSONPlaceholder) and displays the results on the page.
+
+2. Extend your Next.js component that fetches data from a public API (https://jsonplaceholder.typicode.com/users) using server-side rendering (SSR) with the App Router to handle errors gracefully. If the fetch request fails during SSR, display a user-friendly error message on the page. Additionally, provide a retry button so users can attempt to fetch the data again without reloading the entire page.
+
+3. Enhance your Next.js component that fetches data from a public API by adding a loading indicator, such as a spinner. This indicator should be visible while the data is being fetched and hidden once the data has loaded successfully. Ensure the loading state is properly managed on the client side, especially when implementing retry functionality. Use the native fetch function and integrate this loading feedback seamlessly with the error handling and data display in your component.
+
+4. Build a Next.js component that fetches a large dataset from an API and displays it with pagination. Show a limited number of items per page and provide controls to navigate between pages. Use the native fetch and handle data fetching efficiently within the App Router
+
+5. Create a Next.js component that fetches data from a public API (like JSONPlaceholder) using Axios and displays the results on the page. Use the App Router conventions and perform the data fetching on the server side.
+
+6. Modify your previous Next.js Server Component that fetches data with Axios to include error handling. If the request fails, display an error message and provide a retry button so the user can attempt fetching the data again. Implement the retry logic in a Client Component to handle user interaction.
+
+7. Create a Component in Next.js that renders a form allowing the user to input data, such as a post title and content. On form submission, use Axios to send a POST request to a public API endpoint, submitting the user's input data. Handle success and error states appropriately in the UI.
+
+8. Set up Apollo Client in a Next.js app. Create a Server Component that fetches data from a GraphQL API using Apollo Client and passes this data to a Client Component, which then displays it on the page.
+
+9. Create a Next.js 15 setup where data is fetched from a GraphQL API in a Server Component using Apollo Client (or any GraphQL client). The Server Component should fetch a paginated list of items (e.g., books, movies, or products) and pass this data to a Client Component, which displays the items and provides pagination controls for navigating through the dataset.
+
+10. Extend the previous assignment so that mutations (adding, updating, deleting items) are initiated from a Client Component—for example, via a form—but the actual mutation requests are handled by a Server Component. The Server Component should perform the mutation with the GraphQL API and then update the data, which is passed back to the Client Component for display.
+
+11. Demonstrate how to handle errors in GraphQL queries and mutations. Create a setup where a Server Component performs GraphQL requests and passes data or errors to a Client Component. The Client Component should display any error messages when requests fail and provide a way for users to retry the query or mutation.
+
+12. Create a reusable Button component that accepts props to apply different styles such as primary, secondary, and danger, along with click handlers. Demonstrate how to use this Button component within a sample Next.js application.
+
+13. Design and implement a reusable Modal component that allows customization of its content. Provide controls to open, close, and toggle the modal’s visibility. Demonstrate how to use this component to display different types of content within a Next.js application.
+
+14. Create a higher-order component (HOC) named withAuth that restricts access to a component only to authenticated users. Implement this HOC on a sample component and demonstrate how it protects routes or pages in a Next.js application.
+
+15. Build a higher-order component (HOC) named withLogger that logs component lifecycle events like mounting, unmounting, and updating. Apply this HOC to a component and ensure the logs appear in the browser console.
+
+16. Create a higher-order component (HOC) named withDataFetching where the data fetching happens in a Server Component using SSR. The fetched data should then be passed as props to a Client Component wrapped by the HOC, which displays the data.
+

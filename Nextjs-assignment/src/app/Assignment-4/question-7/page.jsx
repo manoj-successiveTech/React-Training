@@ -3,55 +3,55 @@
 
 "use client";
 
-import Input from "@/components/ProductComponent";
 import React, { useState } from "react";
+import Input from "@/components/ProductComponent"; // Custom Input component
 import "@/app/styles/welcome4.css";
+
+const products = [
+  {
+    id: 201,
+    title: "Gaming Laptop",
+    price: 1200,
+    image: "/gaminglaptop.jpeg",
+  },
+  {
+    id: 202,
+    title: "Smartwatch",
+    price: 2500,
+    image: "/smartwatch.jpeg",
+  },
+  {
+    id: 203,
+    title: "DSLR Camera",
+    price: 3500,
+    image: "/dslrcamera.jpeg",
+  },
+  {
+    id: 204,
+    title: "Wireless Mouse",
+    price: 500,
+    image: "/wirelessmouse.jpeg",
+  },
+  {
+    id: 205,
+    title: "Mechanical Keyboard",
+    price: 100,
+    image: "/mechanicalkeyboard.jpeg",
+  },
+  {
+    id: 206,
+    title: "Noise Cancelling Headphones",
+    price: 199,
+    image: "/headphone.jpeg",
+  },
+];
 
 const Page = () => {
   const [searchedItem, setSearchedItem] = useState("");
 
-  const handleSearch = (event) => {
-    setSearchedItem(event.target.value);
+  const handleSearch = (e) => {
+    setSearchedItem(e.target.value);
   };
-
-  const products = [
-    {
-      id: 201,
-      title: "Gaming Laptop",
-      price: 1200,
-      image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c2?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 202,
-      title: "Smartwatch",
-      price: 250,
-      image: "https://images.unsplash.com/photo-1606813902544-1b84a536f590?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 203,
-      title: "DSLR Camera",
-      price: 950,
-      image: "https://images.unsplash.com/photo-1549921296-3a19608be6c6?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 204,
-      title: "Wireless Mouse",
-      price: 350,
-      image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 205,
-      title: "Mechanical Keyboard",
-      price: 100,
-      image: "https://images.unsplash.com/photo-1587202372775-d56ebd63ef1f?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 206,
-      title: "Noise Cancelling Headphones",
-      price: 199,
-      image: "https://images.unsplash.com/photo-1580894908361-7c73c6d89df7?auto=format&fit=crop&w=800&q=80",
-    },
-  ];
 
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchedItem.toLowerCase())

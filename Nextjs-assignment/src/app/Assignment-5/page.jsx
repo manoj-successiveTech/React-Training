@@ -41,6 +41,27 @@ const Page = () => {
           </li>
 
 
+           <li>
+            <Link href='/Assignment-5/question-8'>Question-8</Link>
+          </li>
+
+
+           <li>
+            <Link href='/Assignment-5/question-9'>Question-9</Link>
+          </li>
+
+
+           <li>
+            <Link href='/Assignment-5/question-10'>Question-10</Link>
+          </li>
+
+          <li>
+            <Link href='/Assignment-5/question-11'>Question-11</Link>
+          </li>
+
+          <li>
+            <Link href='/Assignment-5/question-12'>Question-12</Link>
+          </li>
          
         </nav>
 

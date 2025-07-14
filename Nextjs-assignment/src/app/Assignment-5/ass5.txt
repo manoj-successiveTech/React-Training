@@ -4,11 +4,16 @@ Description  (Question-8 to 11 -Graph Ql based questions(Not to do))
 
 1. Create a Next.js component using the App Router that fetches data on the server side (SSR) from a public API (e.g., JSONPlaceholder) and displays the results on the page.
 
-2. Extend your Next.js component that fetches data from a public API (https://jsonplaceholder.typicode.com/users) using server-side rendering (SSR) with the App Router to handle errors gracefully. If the fetch request fails during SSR, display a user-friendly error message on the page. Additionally, provide a retry button so users can attempt to fetch the data again without reloading the entire page.
+2. Extend your Next.js component that fetches data from a public API (https://jsonplaceholder.typicode.com/users) using server-side rendering (SSR) with the App Router to handle errors gracefully. If the fetch request fails during SSR, display a user-friendly error message on the page. 
+Additionally, provide a retry button so users can attempt to fetch the data again without reloading the entire page.
 
-3. Enhance your Next.js component that fetches data from a public API by adding a loading indicator, such as a spinner. This indicator should be visible while the data is being fetched and hidden once the data has loaded successfully. Ensure the loading state is properly managed on the client side, especially when implementing retry functionality. Use the native fetch function and integrate this loading feedback seamlessly with the error handling and data display in your component.
+3. Enhance your Next.js component that fetches data from a public API by adding a loading indicator, such as a spinner. 
+This indicator should be visible while the data is being fetched and hidden once the data has loaded successfully. 
+Ensure the loading state is properly managed on the client side, especially when implementing retry functionality. 
+Use the native fetch function and integrate this loading feedback seamlessly with the error handling and data display in your component.
 
-4. Build a Next.js component that fetches a large dataset from an API and displays it with pagination. Show a limited number of items per page and provide controls to navigate between pages. Use the native fetch and handle data fetching efficiently within the App Router
+4. Build a Next.js component that fetches a large dataset from an API and displays it with pagination. 
+Show a limited number of items per page and provide controls to navigate between pages. Use the native fetch and handle data fetching efficiently within the App Router
 
 5. Create a Next.js component that fetches data from a public API (like JSONPlaceholder) using Axios and displays the results on the page. Use the App Router conventions and perform the data fetching on the server side.
 

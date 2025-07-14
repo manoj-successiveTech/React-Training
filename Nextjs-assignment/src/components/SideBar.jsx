@@ -37,7 +37,7 @@ const assignments = [
   { name: 'Assignment 2', path: '/Assignment-2', questions: 19 },   //  assignment-2 total questions(19) path here .
   { name: 'Assignment 3', path: '/Assignment-3', questions: 6 },    //  assignment-3 total questions(6) path here .
   { name: 'Assignment 4', path: '/Assignment-4', questions: 14 },   //  assignment-4 total questions(14) path here .
-   { name: 'Assignment 5', path:'/Assignment-5', questions: 10 },  //  assignment-5 total questions(14) path here .
+   { name: 'Assignment 5', path:'/Assignment-5', questions: 12 },  //  assignment-5 total questions(14) path here .
 ];
 
 const Main = styled('main', {

@@ -5,7 +5,7 @@
   --button-bg: #333;
   --button-hover-bg: #555;
   --input-border: #ccc;
-  --input-bg: #454040;
+  --input-bg: #726767;
   --container-bg: #694e4e;
   --box-shadow: rgba(0, 0, 0, 0.1);
   --highlight-blue: #007bff;
@@ -114,6 +114,7 @@ h2, h3 {
 .product-list {
   list-style: none;
   padding: 0;
+  color :#9d8585
 }
 
 .product-list li {

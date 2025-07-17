@@ -5,58 +5,84 @@
 // Allow the user to change their theme preference (light/dark) using a button in the child component.
 // Display the theme preference in the UI and adjust the component's styling accordingly.
 
+'use client';
 
-'use client'
 import React, { useState } from 'react';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
 import { ThemeProvider, useTheme } from '@/context/ThemeContext';
 import '@/app/styles/welcome3.css';
 
 const NestedChild = () => {
-  const { isLoggedIn, username, login } = useAuth();
+  const { user, login, error } = useAuth();
   const { theme, toggleTheme } = useTheme();
-  const [name, setName] = useState('');
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    if (!username || !password) {
+      alert('Please enter both username and password');
+      return;
+    }
+
+    login(username, password);
+  };
 
   return (
-    <>
-      <h2>Theme: {theme}</h2>
-      <button onClick={toggleTheme}>Toggle Theme</button>
+    <div className={`login-form ${theme}`}>
+      <h2>Current Theme: <span className="highlight">{theme}</span></h2>
+      <button className="toggle-theme-btn" onClick={toggleTheme}>
+        Toggle Theme
+      </button>
+
       <br /><br />
-      {isLoggedIn ? (
-        <h3>Welcome, {username}!</h3>
+
+      {user ? (
+        <h3>Welcome, <span className="highlight">{user.username}</span>!</h3>
       ) : (
         <>
           <input
             type="text"
-            placeholder="Enter your name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            placeholder="Enter username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            className="input-field"
           />
-          <button onClick={() => login(name)}>Login</button>
+          <input
+            type="password"
+            placeholder="Enter password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="input-field"
+          />
+          <button className="login-button" onClick={handleLogin}>
+            Login
+          </button>
+          {error && <div className="hint" style={{ color: 'red' }}>{error}</div>}
         </>
       )}
-    </>
+    </div>
   );
 };
 
 const ThemedWrapper = ({ children }) => {
   const { theme } = useTheme();
-
-  return (
-    <div className={`app-container ${theme}`}>
-      {children}
-    </div>
-  );
+  return <div className={`app-container ${theme}`}>{children}</div>;
 };
 
-const Question2 = () => (
-  <ThemeProvider>
-  <AuthProvider>
-      <ThemedWrapper>
-        <NestedChild />
-      </ThemedWrapper> 
-  </AuthProvider>
-      </ThemeProvider>
-);
+const Question2 = () => {
+  return (
+
+    <>
+    <ThemeProvider>
+      <AuthProvider>
+        <ThemedWrapper>
+          <NestedChild />
+        </ThemedWrapper>
+      </AuthProvider>
+    </ThemeProvider>
+    </>
+  );
+};
 
 export default Question2;

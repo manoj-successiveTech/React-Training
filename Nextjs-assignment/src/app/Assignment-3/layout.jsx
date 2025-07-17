@@ -1,19 +1,9 @@
-// app/layout.jsx
+// app/assignment-3/question-1/layout.jsx
 
 'use client';
-import { AuthProvider } from '@/context/AuthContext';
-import Styles from "@/app/styles/welcome3.css"
 
 const RootLayout = ({ children }) => {
-  return (
-  
-    
-        <AuthProvider> {/* Already wrapping the entire app */}
-          {children}
-        </AuthProvider>
-    
-   
-  );
+  return <>{children}</>;
 };
 
 export default RootLayout;

@@ -19,7 +19,7 @@ const ProductListPage = () => {
       <ul className="product-list">
         {Products.map((product) => (
           <li key={product.id}>
-            <Link href={`/products/${product.id}`}>
+            <Link href={`question-6/product/${product.id}`}>
               {product.name}
             </Link>
           </li>

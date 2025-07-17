@@ -4,7 +4,7 @@ const Page = () => {
   return (
     <>
         <div>About Page</div>
-        
+
         <p>   This login page allows users to securely enter their credentials and gain access to protected routes. 
         It uses a simple form with two input fields for username and password. When the correct login details 
         are entered — specifically <b>manojkumar65@gmail.com</b> as the username and <b>123456</b> as the password — 

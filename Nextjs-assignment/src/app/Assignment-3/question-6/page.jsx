@@ -9,22 +9,18 @@
 import React from 'react';
 import Link from 'next/link';
 import '@/app/styles/welcome3.css';
+import Products from '@/app/Assignment-3/SampleProducts'   //import separate constant file 
 
-const products = [
-  { id: 1, name: 'Laptop', desc: 'High-performance laptop for work and gaming.' },
-  { id: 2, name: 'Smartphone', desc: 'Latest model with top-notch features.' },
-  { id: 3, name: 'Headphones', desc: 'Noise-cancelling wireless headphones.' },
-];
 
 const ProductListPage = () => {
   return (
     <div className="app-container">
-      <h2>🛍️ Product List</h2>
+      <h2> 🛒 Product List</h2>
       <ul className="product-list">
-        {products.map((product) => (
+        {Products.map((product) => (
           <li key={product.id}>
-            <Link href={`/products/${product.id}`}>
-              ➕ {product.name}
+            <Link href={`question-6/product/${product.id}`}>
+              {product.name}
             </Link>
           </li>
         ))}

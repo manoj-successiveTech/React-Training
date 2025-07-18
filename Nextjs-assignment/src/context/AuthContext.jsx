@@ -1,29 +1,64 @@
-// src/context/AuthContext.jsx used in ass3
+//AuthContext .jsx
 
-'use client'
-import React, { createContext, useContext, useState } from 'react';
+"use client";
+
+import { createContext, useState, useEffect, useContext } from "react";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [username, setUsername] = useState('');
+  const [user, setUser] = useState(null);
+  const [error, setError] = useState(null);
 
-  const login = (name) => {
-    setIsLoggedIn(true);
-    setUsername(name);
+  useEffect(() => {
+    const storedUser = localStorage.getItem("registeredUser");
+    if (!storedUser) {
+
+      // default user stored in const defaultUser
+      const defaultUser = {
+        username: "manojkumar65@gmail.com",
+        password: "123456",
+      };
+      localStorage.setItem("registeredUser", JSON.stringify(defaultUser));
+    }
+  }, []);
+
+  const login = (username, password) => {
+    try {
+      const storedUser = JSON.parse(localStorage.getItem("registeredUser"));
+
+      if (
+        storedUser &&
+        username === storedUser.username &&
+        password === storedUser.password
+      ) {
+        setUser({ username });
+        setError(null);
+        console.log("✅ Login successful:", username);
+      } else {
+        setError("Invalid username or password");
+        console.log("❌ Login failed");
+      }
+    } catch (err) {
+      console.error("Login error:", err);
+      setError("Something went wrong. Please try again.");
+    }
   };
-
   const logout = () => {
-    setIsLoggedIn(false);
-    setUsername('');
+    setUser(null);
+    setError(null);
   };
-
   return (
-    <AuthContext.Provider value={{ isLoggedIn, username, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout, error }}>
       {children}
     </AuthContext.Provider>
   );
 };
 
-export const useAuth = () => useContext(AuthContext);
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
+  return context;
+};

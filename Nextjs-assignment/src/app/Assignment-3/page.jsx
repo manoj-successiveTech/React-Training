@@ -1,7 +1,8 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import Styles from "@/app/styles/welcome3.css"
+// import Styles from "@/app/styles/welcome3.css"
+
 
 const Page = () => {
   return (

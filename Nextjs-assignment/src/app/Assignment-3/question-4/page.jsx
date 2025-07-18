@@ -1,23 +1,26 @@
 'use client';
-import React, { useState } from 'react';
+
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { AuthProvider, useAuth } from '@/context/AuthContext';
+import { useAuth } from '@/context/AuthContext';
 import '@/app/styles/welcome3.css';
 
-const LoginForm = () => {
-  const { login } = useAuth();
-  const [user, setUser] = useState('');
-  const [pass, setPass] = useState('');
+const LoginPage = () => {
+  const { login, user, error } = useAuth();
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
   const router = useRouter();
 
   const handleLogin = () => {
-    if (user === 'admin' && pass === 'admin') {
-      login(user);
-      router.push('question-4/about');
-    } else {
-      alert('Invalid credentials');
-    }
+    login(userName, password);
   };
+
+  // 🔁 Automatically redirect after successful login
+  useEffect(() => {
+    if (user) {
+      router.push('/Assignment-3/question-4/about');
+    }
+  }, [user, router]);
 
   return (
     <div className="app-container">
@@ -25,45 +28,24 @@ const LoginForm = () => {
       <input
         type="text"
         placeholder="Username"
-        value={user}
-        onChange={(e) => setUser(e.target.value)}
+        value={userName}
+        onChange={(e) => setUserName(e.target.value)}
       />
       <input
         type="password"
         placeholder="Password"
-        value={pass}
-        onChange={(e) => setPass(e.target.value)}
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={handleLogin}>Login</button>
-      <div className="hint">Hint: Username: <b>admin</b>, Password: <b>admin</b></div>
+
+      {error && <p className="error" style={{ color: 'red' }}>{error}</p>}
+
+      <div className="hint">
+        Hint: Username: <b>manojkumar65@gmail.com</b>, Password: <b>123456</b>
+      </div>
     </div>
   );
 };
 
-const ProtectedAbout = () => {
-  const { isLoggedIn, username } = useAuth();
-  const router = useRouter();
-
-  if (!isLoggedIn) {
-    router.push('/Question4-login');
-    return null;
-  }
-
-  return (
-    <div className="app-container">
-      <h2>Welcome to the protected About page, {username}!</h2>
-    </div>
-  );
-};
-
-const Question4 = () => {
-  const pathname = useRouter().pathname;
-
-  return (
-    <AuthProvider>
-      {pathname === '/Question4-about' ? <ProtectedAbout /> : <LoginForm />}
-    </AuthProvider>
-  );
-};
-
-export default Question4;
+export default LoginPage;

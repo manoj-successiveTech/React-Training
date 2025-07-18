@@ -10,8 +10,8 @@ import React, { useState } from 'react';
 import '@/app/styles/welcome2.css';
 
 const ToDoList = () => {
-  const [todos, setTodos] = useState([]);
-  const [inputValue, setInputValue] = useState('');
+  const [todos, setTodos] = useState([]);  /// console.log - event .targetvalue
+  const [inputValue, setInputValue] = useState(''); 
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);

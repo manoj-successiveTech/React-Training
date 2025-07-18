@@ -67,6 +67,16 @@ const NestedChild = () => {
 
 const ThemedWrapper = ({ children }) => {
   const { theme } = useTheme();
+
+  return (
+    <div className={`app-container ${theme}`}>
+      {children}
+    </div>
+  );
+};
+
+const Page = ({ children }) => {
+  const { theme } = useTheme();
   return <div className={`app-container ${theme}`}>{children}</div>;
 };
 
@@ -85,4 +95,4 @@ const Question2 = () => {
   );
 };
 
-export default Question2;
+export default Page

@@ -1,6 +1,19 @@
 'use client';
 
+<<<<<<< HEAD
+// 1.create two components: a parent component that acts as a provider and a child component that consumes the context.
+// Create a context to manage a user's authentication status (logged in or out).
+// Implement a login button in the child component that, when clicked, updates the authentication status in the context to "logged in."
+// Display a message in the child component based on the user's authentication status. If the user is logged in, show "Welcome, [username]!"
+// Otherwise, display "Please log in."
+// Question1 - page.jsx
+
+'use client'
+import React, { useState } from 'react';
+import { AuthProvider, useAuth } from '@/context/AuthContext';
+=======
 import React, { useEffect, useState } from 'react';
+>>>>>>> e228d52c1983bc6293a886688b18355d04af367a
 import '@/app/styles/welcome3.css';
 
 const Question1 = () => {

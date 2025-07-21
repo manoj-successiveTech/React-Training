@@ -38,6 +38,7 @@ const assignments = [
   { name: 'Assignment 3', path: '/Assignment-3', questions: 6 },    //  assignment-3 total questions(6) path here .
   { name: 'Assignment 4', path: '/Assignment-4', questions: 14 },   //  assignment-4 total questions(14) path here .
    { name: 'Assignment 5', path:'/Assignment-5', questions: 12 },  //  assignment-5 total questions(14) path here .
+   { name: 'Assignment 6', path:'/Assignment-6'}
 ];
 
 const Main = styled('main', {
